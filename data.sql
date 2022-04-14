@@ -90,7 +90,7 @@ VALUES((SELECT id from animals where name='Gabumon'),(SELECT id from vets where 
 
 INSERT INTO visits (animal_id, vet_id, date_of_visit) 
 VALUES((SELECT id from animals where name='Devimon'),(SELECT id from vets where name='Stephanie Mendez'),'2021-5-4'),
-((SELECT id from animals where name='Charmander'),(SELECT id from vets where name='Jack Harkness'),'2021-02-24'),
+((SELECT id from animals where name='Charmander'),(SELECT id from vet where name='Jack Harkness'),'2021-02-24'),
 ((SELECT id from animals where name='Plantmon'),(SELECT id from vets where name='Maisy Smith'),'2019-12-21'),
 ((SELECT id from animals where name='Plantmon'),(SELECT id from vets where name='William Tatcher'),'2020-08-10'),
 ((SELECT id from animals where name='Plantmon'),(SELECT id from vets where name='Maisy Smith'),'2021-04-7');
