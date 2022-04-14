@@ -9,7 +9,7 @@ SELECT * FROM animals WHERE neutered is TRUE;
 SELECT * from animals WHERE name <> 'Gabumon';
 SELECT * from animals WHERE weight_kg >=10.4 AND weight_kg <=17.3;
 
--- PROJECT #2 QUERIES
+-- PROJECT 2 QUERIES
 
 BEGIN;
 UPDATE animals
@@ -45,7 +45,7 @@ SET weight_kg = weight_kg * -1
 WHERE weight_kg < 0;
 COMMIT;
 
--- QUERIES TO ANSWER PROJECT #2 QUESTIONS
+-- QUERIES TO ANSWER PROJECT 2 QUESTIONS
 
 -- How many animals are there? // 10
 SELECT COUNT(*) FROM animals;
