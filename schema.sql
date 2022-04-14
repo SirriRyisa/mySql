@@ -4,7 +4,7 @@ CREATE DATABASE vet_clinic;
 
 CREATE TABLE animals(
     id               INT GENERATED ALWAYS AS IDENTITY,
-    name             VARCHAR(250),
+    name             VARCHAR(100),
     date_of_birth    DATE,
     escape_attempts  INT,
     neutered         BOOLEAN,
@@ -13,12 +13,12 @@ CREATE TABLE animals(
 );
 
 -- Add a column `species` of type string to the animals table
-ALTER TABLE animals ADD COLUMN species VARCHAR(250);
+ALTER TABLE animals ADD COLUMN species VARCHAR(100);
 
 -- Created table for owners
 CREATE TABLE owners(
     id              INT GENERATED ALWAYS AS IDENTITY,
-    full_name       VARCHAR(250),
+    full_name       VARCHAR(100),
     age             INT,
     PRIMARY KEY(id)
 );
@@ -26,7 +26,7 @@ CREATE TABLE owners(
 -- Created a table for species
 CREATE TABLE species(
     id              INT GENERATED ALWAYS AS IDENTITY,
-    name            VARCHAR(250),
+    name            VARCHAR(100),
     PRIMARY KEY(id)
 );
 
