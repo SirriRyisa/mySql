@@ -13,7 +13,7 @@ INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) 
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES ('Blossom', '1998-10-13', 3, TRUE, 17.0);
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES ('Ditto', '2022-03-14', 4, TRUE, 22.0);
 
--- Data from Project #3
+-- Owners data
 INSERT INTO owners (full_name, age) VALUES ('Sam Smith', 34);
 INSERT INTO owners (full_name, age) VALUES ('Jennifer Orwell', 19);
 INSERT INTO owners (full_name, age) VALUES ('Bob', 45);
@@ -54,7 +54,7 @@ UPDATE animals
   SET owner_id = (SELECT id FROM owners WHERE full_name = 'Dean Winchester')
   WHERE name IN ('Angemon', 'Boarmon');
 
--- Insert data into vets table
+-- Insert info into vets tabs
 INSERT INTO vets (name,age,date_of_graduation)
 VALUES ('William Tatcher', 45 , '2000-4-23');
 
@@ -67,7 +67,7 @@ VALUES ('Stephanie Mendez', 64 , '1981-05-14');
 INSERT INTO vets (name,age,date_of_graduation)
 VALUES ('Jack Harkness', 38 , '2008-06-18');
 
--- Insert data into specialization table
+-- Insert info into specialization tabs
 INSERT INTO specializations (species_id, vet_id) 
 VALUES (1,(SELECT id FROM vets WHERE name = 'William Tatcher'));
 
@@ -77,7 +77,7 @@ VALUES (1,(SELECT id FROM vets WHERE name = 'Stephanie Mendez')), (2,(SELECT id 
 INSERT INTO specializations (species_id, vet_id) 
 VALUES (2,(SELECT id FROM vets WHERE name = 'Jack Harkness'));
 
--- Insert data into visits table
+-- Insert data into visits tabs
 INSERT INTO visits (animal_id, vet_id, date_of_visit) 
 VALUES((SELECT id from animals where name='Agumon'),(SELECT id from vets where name='William Tatcher'),'2020-05-24');
 
