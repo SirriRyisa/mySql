@@ -1,4 +1,4 @@
-/* Database schema to keep the structure of entire database. */
+/* Database schema to maintain database structure. */
 
 CREATE DATABASE vet_clinic;
 
@@ -15,7 +15,7 @@ CREATE TABLE animals(
 -- Add a column `species` of type string to the animals table
 ALTER TABLE animals ADD COLUMN species VARCHAR(250);
 
--- Create a table named owners
+-- Created table for owners
 CREATE TABLE owners(
     id              INT GENERATED ALWAYS AS IDENTITY,
     full_name       VARCHAR(250),
@@ -23,7 +23,7 @@ CREATE TABLE owners(
     PRIMARY KEY(id)
 );
 
--- Create a new table named species
+-- Created a table for species
 CREATE TABLE species(
     id              INT GENERATED ALWAYS AS IDENTITY,
     name            VARCHAR(250),
